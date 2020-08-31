@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	
+	<meta name="description" content="Software Engineer, Tech, Startup and more.">
+	<meta name="generator" content="Hugo 0.74.3" />
+	<title>Rebuilding DarrylNorris.com Using Drupal 8 &middot; Software Engineer, Tech, Startup and more</title>
+	<link rel="shortcut icon" href="https://www.darrylnorris.com/images/favicon.ico">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/style.css">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/highlight.css">
+
+	
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/monosocialiconsfont.css">
+	
+
+	
+	<link href="https://www.darrylnorris.com/index.xml" rel="alternate" type="application/rss+xml" title="Software Engineer, Tech, Startup and more" />
+	
+
+	
+</head>
+
+<body>
+    <nav class="main-nav">
+	
+	
+	<a href='https://www.darrylnorris.com/'> <span
+			class="arrow">←</span>Home</a>
+	
+	<a href='https://www.darrylnorris.com/blog'>Archive</a>
+	
+	<a href='https://www.darrylnorris.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://www.darrylnorris.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper" class="post">
+        <article>
+            <header>
+                <h1>
+                    Rebuilding DarrylNorris.com Using Drupal 8
+                </h1>
+                <h2 class="headline">
+                    Feb 9, 2016
+                    · 741 words
+                    · 4 minute read
+                    <span class="tags">
+                        
+                        
+                        
+                        <a href="https://www.darrylnorris.com/tags/php">php</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/development">development</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/theming">theming</a>
+                        
+                        
+                        
+                    </span>
+                </h2>
+            </header>
+            
+            <section id="post-body">
+                <p>I have been experimenting with Drupal 8 for about a year and half trying to be ready to use it in my projects. Currently
+Drupal 8 is interesting stage where some Drupal 7 project have been doing a straight port, some of them are been
+re-architecture and some project have die. For this reason I have decide to try it out some of those new contrib projects
+with Drupal 8 version on a production site <a href="http://www.darrylnorris.com">www.darrylnorris.com</a>.</p>
+<p>There few things that I took consider before I started working on rebuilding my website. I wanted to have my website with
+a decent front page load time under 2 seconds. I did not wanted to do a migration because my website is very small so I
+thought it will be better to rebuild the entire website instead of migrating. Also, I wanted to make it into a blog,
+because my previous website I had lot other things plan for the website and I never did; as results, I ended up with
+some a lot unnecessary contrib modules. Finally, my website should SEO friendly.</p>
+<p>What theme ? <a href="https://www.drupal.org/project/casper">Casper</a>
+Before I even started the process of porting my website I decide to build a theme that looks the same as the <a href="https://ghost.org/">Ghost</a>
+Default theme <a href="https://www.drupal.org/project/casper">Casper</a> but for Drupal 8. Because this theme is very good looking, lightweight and it was build for a blog,
+which meet all my requirements for my website.</p>
+<p>List of contrib modules that I use:</p>
+<p><a href="https://www.drupal.org/project/bigpipe">Bigpipe</a> is a new module only available in Drupal 8 that help improve your website performance. Sends pages in a way that allows browsers to show them much faster. First sends the cacheable parts of the page, then the dynamic/uncacheable parts.</p>
+<p><a href="https://www.drupal.org/project/composer_manager">Composer Manager</a> this module is kinda popular; however, I think this project is going to take a huge role now that Drupal is moving to the composer world. This module is going be talking the role of Libraries API but for PHP libraries. I think the most important feature is that allows you to combine your contrib composer.json with your root composer.json, which very neat to handle dependency from the root level instead of on every single contrib project.</p>
+<p><a href="https://www.drupal.org/project/contact_storage">Contact Storage</a> is a module that allows you to store data from the contact module in Drupal 8.</p>
+<p><a href="https://www.drupal.org/project/form_placeholder">Form Placeholder</a> is a module for site builder it allows you to replace your label with HTML placeholder.</p>
+<p><a href="https://www.drupal.org/project/google_analytics">Google Analytics</a> is a module that allows you to connected Drupal website with Google Analytics. It seem to be working
+as well as the Drupal 7 version.</p>
+<p><a href="https://www.drupal.org/project/honeypot">Honeypot</a> is one of the first Drupal 8 module to be ready for Drupal 8 stable releases. Honeypot is a very mature project
+been around since 2011 and it have a Drupal 7 version. This module helps to prevent spam.</p>
+<p><a href="https://www.drupal.org/project/metatag">Metatag</a> is a module that allows you to to add and configure metatag in Drupal 8. This project seem to be working the
+same as in Drupal 7.</p>
+<p><a href="https://www.drupal.org/project/Pathauto">Pathauto</a>, one of the most important Drupal modules and in my opinion a module that should be part of Drupal core. This module allows you to generate URL programmatically with aliases.</p>
+<p><a href="https://www.drupal.org/project/Redirect">Redirect</a> ships now with Global Redirect module, which was the main reason why I add this project into my website.
+However, Redirect module allows you add redirect inside of your Drupal website.</p>
+<p><a href="https://www.drupal.org/project/smart_trim">Smart Trim</a> is a very basic module that allows you to trim in a more intelligent way that Drupal core does it. I mainly use it for trip my views content.</p>
+<p>I did not include the dependency modules like ctools and token but they seem to be working fine.</p>
+<p>My final thoughts on rebuilding a DarrylNorris.com using Drupal 8</p>
+<p>For site-builders building a very complex website with Drupal 8 might not be the best option. If you are building a
+basic website Drupal 8 might be ready for you. However, if you are developer that are willing to take some of risk and
+contribute back to the community by improving the project, I think Drupal 8 its be ready for you in most use case. I was
+able to have a blog-like website that is running using Drupal 8, without a lot effort. I have been having a lot fun
+writing Casper as well as doing site building with Drupal 8. Soon, I will try to do a stable release of Casper so other
+people can take advantage of this sexy looking theme.</p>
+
+            </section>
+        </article>
+
+        
+
+        
+
+        
+
+        <footer id="footer">
+    
+    <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/itsdarrylnorris">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darrylnorris/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/itsdarrylnorris/">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/itsdarrylnorris">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+        
+        © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> Darryl Norris
+        
+    </p>
+</footer>
+    </section>
+
+    <script src="https://www.darrylnorris.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://www.darrylnorris.com/js/main.js"></script>
+<script src="https://www.darrylnorris.com/js/darkmode.js"></script>
+<script src="https://www.darrylnorris.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+
+</body>
+
+</html>

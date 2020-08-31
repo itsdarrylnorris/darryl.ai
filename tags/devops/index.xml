@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on Software Engineer, Tech, Startup and more</title>
+    <link>https://www.darrylnorris.com/tags/devops/</link>
+    <description>Recent content in DevOps on Software Engineer, Tech, Startup and more</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.darrylnorris.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lazy Dubuntu First Week Recap</title>
+      <link>https://www.darrylnorris.com/blog/lazy-dubuntu-first-week-recap/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.darrylnorris.com/blog/lazy-dubuntu-first-week-recap/</guid>
+      <description>How everything started? A few weeks ago, I had run into some problems with my Ubuntu laptop and for this reason I had to re-install operating systems a few times. I had noticed that every time I install my Ubuntu Desktop I had to follow the same steps in order to have a developer’s environment. So I decided to create a shell script that will contain all the instructions and tools that I would need to have my workflow just in case I need it in the future.</description>
+    </item>
+    
+  </channel>
+</rss>

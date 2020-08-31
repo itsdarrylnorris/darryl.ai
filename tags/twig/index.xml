@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>twig on Software Engineer, Tech, Startup and more</title>
+    <link>https://www.darrylnorris.com/tags/twig/</link>
+    <description>Recent content in twig on Software Engineer, Tech, Startup and more</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.darrylnorris.com/tags/twig/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dirty Trick To Style Views Fields in Drupal 8</title>
+      <link>https://www.darrylnorris.com/blog/dirty-trick-to-style-views-fields-drupal-8/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.darrylnorris.com/blog/dirty-trick-to-style-views-fields-drupal-8/</guid>
+      <description>Have you ever try it out creating a views field template in Drupal 8? When I started working with Casper, I was trying to create a template base on a views field template and I notice few things inusual. First, there is no longer theming information from the views UI level instead they encourage you to use theme_debug (https://www.drupal.org/node/2362413). Sadly theme_debug does not show all the suggestion possible (https://www.drupal.org/node/2118743) and one of those suggestion is views field templates.</description>
+    </item>
+    
+    <item>
+      <title>CSS for Drupal 7 Site Builders</title>
+      <link>https://www.darrylnorris.com/blog/css-for-drupal-7-site-builders/</link>
+      <pubDate>Sun, 18 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.darrylnorris.com/blog/css-for-drupal-7-site-builders/</guid>
+      <description>When I started working on my first Drupal project adding css was a little bit tricky. At first I used to add css on the main style sheet from the theme. When most of the time this is not a good ideas because sometimes you do not want to override everything on the entire website. Sadly Drupal 7 by default does not allow you to add css from the administration pages.</description>
+    </item>
+    
+  </channel>
+</rss>

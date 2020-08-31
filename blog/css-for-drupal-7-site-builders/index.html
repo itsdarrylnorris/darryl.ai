@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	
+	<meta name="description" content="Software Engineer, Tech, Startup and more.">
+	<meta name="generator" content="Hugo 0.74.3" />
+	<title>CSS for Drupal 7 Site Builders &middot; Software Engineer, Tech, Startup and more</title>
+	<link rel="shortcut icon" href="https://www.darrylnorris.com/images/favicon.ico">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/style.css">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/highlight.css">
+
+	
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/monosocialiconsfont.css">
+	
+
+	
+	<link href="https://www.darrylnorris.com/index.xml" rel="alternate" type="application/rss+xml" title="Software Engineer, Tech, Startup and more" />
+	
+
+	
+</head>
+
+<body>
+    <nav class="main-nav">
+	
+	
+	<a href='https://www.darrylnorris.com/'> <span
+			class="arrow">←</span>Home</a>
+	
+	<a href='https://www.darrylnorris.com/blog'>Archive</a>
+	
+	<a href='https://www.darrylnorris.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://www.darrylnorris.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper" class="post">
+        <article>
+            <header>
+                <h1>
+                    CSS for Drupal 7 Site Builders
+                </h1>
+                <h2 class="headline">
+                    Jan 18, 2015
+                    · 759 words
+                    · 4 minute read
+                    <span class="tags">
+                        
+                        
+                        
+                        <a href="https://www.darrylnorris.com/tags/twig">twig</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/drupal">Drupal</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/theming">theming</a>
+                        
+                        
+                        
+                    </span>
+                </h2>
+            </header>
+            
+            <section id="post-body">
+                <p>When I started working on my first Drupal project adding css was a little bit tricky. At first I used to add css on the main style sheet from the theme. When most of the time this is not a good ideas because sometimes you do not want to override everything on the entire website. Sadly Drupal 7 by default does not allow you to add css from the administration pages. This is when I started looking for alternatives to allow me override my css by using a module.</p>
+<p>Sometimes site builder and system administration needs to be able to add new css, override or change css the to the theme. This can be done easily by adding a custom css on the theme; however, sometime the css change is only for one page, node, or a specific content type. This would required some extra knowledge on Drupal theming. For non-developers this can be changeling or a little bit more difficult. For these reason they are multiple contribute modules that allows you to modify, override or add new css. In this article, I would explain each module and how it can be used.</p>
+<h3 id="code-per-nodehttpswwwdrupalorgprojectcpn"><a href="https://www.drupal.org/project/cpn"><strong>Code Per Node</strong></a></h3>
+<p>Code Per Node (cpn) module allows you to add css to a content type or to a node. This is great to allowing some users to add their custom css to a specific page or content type without allowing them to hack the theme. This module will generate a css file for every node that you add some css.</p>
+<p>This is how the code per node module looks like on a node:</p>
+<p><img src="/images/css-for-drupal-7-site-builders/cpn_node.png" alt="&lsquo;Code Per Node&rsquo;"></p>
+<p>This is how it looks like on a content type:</p>
+<p><img src="/images/css-for-drupal-7-site-builders/cpn_content_type.PNG" alt="&lsquo;Code Per Node&rsquo;"></p>
+<blockquote>
+<p>Pro Tip
+If you are repeating your css you should consider adding your css theme instead since this would generate a css file every single time you used it.</p>
+</blockquote>
+<h3 id="css-injectorhttpswwwdrupalorgprojectcss_injector"><a href="https://www.drupal.org/project/css_injector"><strong>CSS Injector</strong></a></h3>
+<p>CSS Injector (css_injector) is module allows you set some rules to trigger a css file. They are two main different between this module and the Code Per Node module. First main different is that all the css are administer in one page. Compare to the Code Per Node module administer their css on the node or the content type. The second main different is the that CSS Injector provide you to add css base on the URL just like the core module Block . This module would is mainly to used it when you need to add a css to a page that is not a node like a views. Just as the Code Per Node module this also generate separate file but in this case would generate base on the rule.</p>
+<p>Here is an example of the administration page of the css injector.</p>
+<p><img src="/images/css-for-drupal-7-site-builders/css_injector_page.png" alt="&lsquo;CSS Injector Page"></p>
+<p>This is how the css injector page looks like.</p>
+<p><img src="/images/css-for-drupal-7-site-builders/css_injector_rule.png" alt="&lsquo;CSS Injector Rule&rsquo;"></p>
+<blockquote>
+<p>Warning
+By the time this article is been written, the stable version of the CSS Injector is currently have a bug with Pantheon.</p>
+</blockquote>
+<h3 id="css-editorhttpswwwdrupalorgprojectcss_editor"><a href="https://www.drupal.org/project/css_editor"><strong>CSS editor</strong></a></h3>
+<p>CSS editor (css_editor) would let you to choose a theme that you would like to override their css and then you can add a css globally. Compare to the other modules the CSS editor is going to allow you to change the css just only in one place and is going to generate only one css. This is great if you want to modify the css by using the Drupal UI.</p>
+<h3 id="live-csshttpswwwdrupalorgprojectlive_css"><a href="https://www.drupal.org/project/live_css"><strong>Live CSS</strong></a></h3>
+<p>Live CSS (live_css) is allows you to modify any css file and save inside of the Drupal UI. Compare to the CSS Editor would override by using a separate style sheet, this module would change the actual css instead. The module is very similar to the inspect element but you can actually save it. I believe this module is mainly for the development process where the theme is been created; however, this can be used on live project.</p>
+<p><img src="/images/css-for-drupal-7-site-builders/live_css.png" alt="&lsquo;Live CSS&rsquo;"></p>
+<p>To conclude, these module it can be used for different scenarios. Code Per Node, its great when we need to allow a role to add css to an specific node or content type. CSS Injector the best scenario for it to add css base on URL. CSS editor is the easier way to add global css to the theme by using the Drupal UI. Finally, Live CSS allows you to modify any css inside of your Drupal website.</p>
+<blockquote>
+<p>Note
+These modules should be used for quick changes. These modules should not be used not for theming your entire Drupal website. If you are a new front-end developer you should look into Theme Guide to add css to your theme or module.</p>
+</blockquote>
+
+            </section>
+        </article>
+
+        
+
+        
+
+        
+
+        <footer id="footer">
+    
+    <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/itsdarrylnorris">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darrylnorris/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/itsdarrylnorris/">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/itsdarrylnorris">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+        
+        © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> Darryl Norris
+        
+    </p>
+</footer>
+    </section>
+
+    <script src="https://www.darrylnorris.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://www.darrylnorris.com/js/main.js"></script>
+<script src="https://www.darrylnorris.com/js/darkmode.js"></script>
+<script src="https://www.darrylnorris.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+
+</body>
+
+</html>

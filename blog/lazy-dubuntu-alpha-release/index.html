@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	
+	<meta name="description" content="Software Engineer, Tech, Startup and more.">
+	<meta name="generator" content="Hugo 0.74.3" />
+	<title>Lazy Dubuntu Alpha Release &middot; Software Engineer, Tech, Startup and more</title>
+	<link rel="shortcut icon" href="https://www.darrylnorris.com/images/favicon.ico">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/style.css">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/highlight.css">
+
+	
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/monosocialiconsfont.css">
+	
+
+	
+	<link href="https://www.darrylnorris.com/index.xml" rel="alternate" type="application/rss+xml" title="Software Engineer, Tech, Startup and more" />
+	
+
+	
+</head>
+
+<body>
+    <nav class="main-nav">
+	
+	
+	<a href='https://www.darrylnorris.com/'> <span
+			class="arrow">←</span>Home</a>
+	
+	<a href='https://www.darrylnorris.com/blog'>Archive</a>
+	
+	<a href='https://www.darrylnorris.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://www.darrylnorris.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper" class="post">
+        <article>
+            <header>
+                <h1>
+                    Lazy Dubuntu Alpha Release
+                </h1>
+                <h2 class="headline">
+                    Dec 16, 2014
+                    · 698 words
+                    · 4 minute read
+                    <span class="tags">
+                        
+                        
+                        
+                        <a href="https://www.darrylnorris.com/tags/php">php</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/development">development</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/theming">theming</a>
+                        
+                        
+                        
+                    </span>
+                </h2>
+            </header>
+            
+            <section id="post-body">
+                <p>Happy to announce Lazy Dubuntu Alpha version with virtual host support. What is new ? We have replaced SmartGit for Git-cola because git-cola is completely open source. In addition, we have added SSMTP to our development environment so e-mails can go out from our ubuntu server. We have added OpenSSH client and server so servers can be accessed from another computer via SSH. As part of the lazy project, we are providing two set of commands new-website and delete-website. These commands are going to help you in creating a new virtual host and removing a virtual host.</p>
+<h3 id="how-to-create-a-new-virtual-host-">How to create a new virtual host ?</h3>
+<pre><code>sudo new-website newwebsite
+# Remember that you can name your virtual host whatever you want, it not necessary to name it newwebsite.
+</code></pre><p>This is going to create and auto-generate a virtual host with the name “newwebsite” and a index.html that said “its works newwebsite”. You can access this on a browser by typing the hostname and the extension .dev. In this case you should be able to access the website by typing newwebsite.dev. In the picture below you can see the process of what new-website does. This will create a new directory on <code>/var/www/hostname</code> in this case <code>/var/www/newwebsite</code>. Then, new-website is going to generate a file on apache that contains the necessary configuration to run a virtual host. Finally, new-website is going to add a new host on your <code>/etc/hosts file</code>.</p>
+<h3 id="so-now-how-i-can-install-drupal-">So now how I can install Drupal ?</h3>
+<p>After the virtual host is created the Drupal installation should be as a usual installation on Ubuntu. I&rsquo;m assuming that you already <a href="https://www.drupal.org/documentation/install/create-database#phpmyadmin">created database using phpmyadmin</a> that it can be found at localhost/phpmyadmin. Open the terminal and follow these steps to set-up the drupal install files.</p>
+<pre><code>cd /var/www/newwebsite
+
+###
+# Move to working directory.
+# Remember that newwebsite can change depends on your hostname. sudo rm index.html
+# Remove the test website sudo drush dl drupal-7
+# For D8 just change to drush dl drupal-8 cd drupal-7* sudo mv * .[^.]* .. cd ..
+###
+
+sudo rm -rf drupal-7*
+
+## Remove unnecessary folder
+sudo cp sites/default/default.settings.php sites/default/settings.php sudo chmod a+w sites/default/settings.php sudo chmod a+w sites/default
+</code></pre><blockquote>
+<p>Too Many Steps
+If you think these are two many steps for lazy users like us, I agree for that reason we are working on automating these steps for more information please check out this issue <a href="https://github.com/itsdarrylnorris/lazydubuntu/issues/21">Virtual Host Support with Drush</a>.</p>
+</blockquote>
+<p>Now, we need to connect the database with our Drupal files, the faster way to do this is using drush. Assuming that your database is <code>newwebsitedatabase</code> and your username is <code>newwebsiteuser</code> and the password is <code>newwebsitepassword</code>. You can type the following command in our working directory.</p>
+<pre><code>drush site-install standard --db-url='mysql://newwebsiteuser:newwebsitepassword@localhost/newwebsitedatabase' --site-name=NewWebsite
+</code></pre><p>You should be able to see something similar to the image below. A success message with the password of the Drupal website.</p>
+<p><img src="/images/lazy-dubuntu-alpha-release/completeinstall.png" alt="&lsquo;Complete Installation&rsquo;"></p>
+<h3 id="how-to-remove-a-virtual-host-">How to remove a virtual host ?</h3>
+<p><code>sudo delete-website newwebsite # Make sure if you are typing the right hostname.</code></p>
+<blockquote>
+<p>Warning
+You should be aware that this is going to remove all the files from your website and your virtual host configuration. However, we currently not supporting deleting database on sudo delete-website. We are working on adding this functionality, you can check out this issue Remove Database on delsite.</p>
+</blockquote>
+<blockquote>
+<p>Pro Tip:
+If you are lazy you can use newsite instead of new-website and delsite instead of delete-website.</p>
+</blockquote>
+<p>What is going to be next? I have several issues on github based on what is going to be the new features for Lazy Dubuntu. One of them is going to be Nginx support. Nginx is a very powerful server, it&rsquo;s also an alternative of Apache for this reason, we are going to support Nginx as part of the Lazy Dubuntu project. Another cool feature that will be on Lazy Dubuntu is a website that contains all the information of the server, for more information about it check out this issue localhost website . I have been thinking about moving the Lazy Dubuntu documentation to DarrylNorris.com instead of LazyDubuntu just because the is easier for me to manage.</p>
+<p>Do you think this is awesome ? What you think about Lazy Dubuntu alpha ? I will appreciated your feedback.</p>
+
+            </section>
+        </article>
+
+        
+
+        
+
+        
+
+        <footer id="footer">
+    
+    <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/itsdarrylnorris">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darrylnorris/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/itsdarrylnorris/">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/itsdarrylnorris">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+        
+        © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> Darryl Norris
+        
+    </p>
+</footer>
+    </section>
+
+    <script src="https://www.darrylnorris.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://www.darrylnorris.com/js/main.js"></script>
+<script src="https://www.darrylnorris.com/js/darkmode.js"></script>
+<script src="https://www.darrylnorris.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+
+</body>
+
+</html>

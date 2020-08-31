@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	
+	<meta name="description" content="Software Engineer, Tech, Startup and more.">
+	<meta name="generator" content="Hugo 0.74.3" />
+	<title>Dirty Trick To Style Views Fields in Drupal 8 &middot; Software Engineer, Tech, Startup and more</title>
+	<link rel="shortcut icon" href="https://www.darrylnorris.com/images/favicon.ico">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/style.css">
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/highlight.css">
+
+	
+	<link rel="stylesheet" href="https://www.darrylnorris.com/css/monosocialiconsfont.css">
+	
+
+	
+	<link href="https://www.darrylnorris.com/index.xml" rel="alternate" type="application/rss+xml" title="Software Engineer, Tech, Startup and more" />
+	
+
+	
+</head>
+
+<body>
+    <nav class="main-nav">
+	
+	
+	<a href='https://www.darrylnorris.com/'> <span
+			class="arrow">←</span>Home</a>
+	
+	<a href='https://www.darrylnorris.com/blog'>Archive</a>
+	
+	<a href='https://www.darrylnorris.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://www.darrylnorris.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper" class="post">
+        <article>
+            <header>
+                <h1>
+                    Dirty Trick To Style Views Fields in Drupal 8
+                </h1>
+                <h2 class="headline">
+                    Feb 16, 2016
+                    · 553 words
+                    · 3 minute read
+                    <span class="tags">
+                        
+                        
+                        
+                        <a href="https://www.darrylnorris.com/tags/twig">twig</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/drupal">Drupal</a>
+                        
+                        <a href="https://www.darrylnorris.com/tags/theming">theming</a>
+                        
+                        
+                        
+                    </span>
+                </h2>
+            </header>
+            
+            <section id="post-body">
+                <p>Have you ever try it out creating a views field template in Drupal 8? When I started working with Casper, I was trying
+to create a template base on a views field template and I notice few things inusual. First, there is no longer theming
+information from the views UI level instead they encourage you to use theme_debug (<a href="https://www.drupal.org/node/2362413)">https://www.drupal.org/node/2362413)</a>.
+Sadly theme_debug does not show all the suggestion possible (<a href="https://www.drupal.org/node/2118743">https://www.drupal.org/node/2118743</a>) and one of those
+suggestion is views field templates.</p>
+<p>I have been Drupal for quite a while so I know my work around to write a template without a suggestions. So I wrote
+something like this <code>views-view-field--frontpage--title.html.twig</code> to be able to add wrapper to title of the views
+frontpage, without need of a preprocess function. From here I use kint to debug which variables are available at this
+template and I run into multiple issues. First issue was a server error similar to this ..</p>
+<pre><code>Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away:
+CREATE TABLE {cache_render} ( `cid` VARCHAR(255) BINARY CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT
+'' COMMENT 'Primary Key: Unique cache ID.', `data` LONGBLOB NULL DEFAULT NULL COMMENT 'A collection of data to cache.',
+`expire` INT NOT NULL DEFAULT 0 COMMENT 'A Unix timestamp indicating when the cache entry should expire, or -1 for never.
+', `created` DECIMAL(14, 3) NOT NULL DEFAULT 0 COMMENT 'A timestamp with millisecond precision indicating when the cache
+entry was created.', `serialized` SMALLINT NOT NULL DEFAULT 0 COMMENT 'A flag to indicate whether content is serialized
+(1) or not (0).', `tags` LONGTEXT NULL DEFAULT NULL COMMENT 'Space-separated list of cache tags for this entry.', `checksum`
+VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The tag invalidation checksum when this entry
+was saved.', PRIMARY KEY (`cid`), INDEX `expire` (`expire`) ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4 COMMENT
+'Storage for the cache API.'; Array ( ) in Drupal\Core\Render\RenderCache-&gt;set() (line 275 of core/lib/Drupal/Core/Render/RenderCache.php).
+The website encountered an unexpected error. Please try again later.
+</code></pre><p>This can be fix by increasing <code>MAX_ALLOWED_PACKET</code>.</p>
+<p>Second issue was my browser crashing while trying to debug the variables available . Using <code>{{ kint() }}</code> will cause my
+browser to crash because it will try to get raw data from the sql query and that is too much for kint. After some
+investigation I found out a workaround to be able to add wrappers to views fields. By adding a preprocess function
+that turn views row into a variables. This will allows you to have a variables that you can added wrappers around it.
+Here is an example of preprocess function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function MYTHEME_preprocess_views_view_field(<span style="color:#960050;background-color:#1e0010">&amp;</span>$variables) {
+  $variables[&#39;output&#39;] = $variables[&#39;field&#39;]-&gt;advancedRender($variables[&#39;row&#39;]);
+}
+</code></pre></div><p>Once you have the above preprocess function in your project (theme/module) you can get a variables called output in your
+twig template. Just like this&hellip;</p>
+<pre><code>&lt;div class=&quot;wrapper&quot;&gt;{{ output }}&lt;/div&gt;
+</code></pre><p>And there you got that is how you can style views fields in Drupal 8. You can also achieve the same goal by creating a
+preprocess function that allow you to add a wrapper for a specify views field. However, I prefer to do it on a row level
+because it will automatically apply to any view field.</p>
+<p>Most of the information from this article was taken from a discussion at Drupal Answers, if you wish to see the original
+discussion please visit - <a href="http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig">http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig</a></p>
+
+            </section>
+        </article>
+
+        
+
+        
+
+        
+
+        <footer id="footer">
+    
+    <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/itsdarrylnorris">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darrylnorris/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.reddit.com/user/itsdarrylnorris/">
+        circlereddit
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/itsdarrylnorris">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+        
+        © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> Darryl Norris
+        
+    </p>
+</footer>
+    </section>
+
+    <script src="https://www.darrylnorris.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://www.darrylnorris.com/js/main.js"></script>
+<script src="https://www.darrylnorris.com/js/darkmode.js"></script>
+<script src="https://www.darrylnorris.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode({
+      saveInCookies: true, 
+      label: '🌓', 
+      autoMatchOsTheme: true 
+    }).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+
+
+
+</body>
+
+</html>
