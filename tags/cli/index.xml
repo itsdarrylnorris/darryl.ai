@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cli on Software Engineer, Tech, Startup and more</title>
-    <link>https://www.darrylnorris.com/tags/cli/</link>
+    <link>https://www.darryl.ai/tags/cli/</link>
     <description>Recent content in cli on Software Engineer, Tech, Startup and more</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Feb 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.darrylnorris.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.darryl.ai/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Drupal Console SandCamp Sprinting At The Beach</title>
-      <link>https://www.darrylnorris.com/blog/drupal-console-sandcamp-sprinting-at-beach/</link>
+      <link>https://www.darryl.ai/blog/drupal-console-sandcamp-sprinting-at-beach/</link>
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/blog/drupal-console-sandcamp-sprinting-at-beach/</guid>
+      <guid>https://www.darryl.ai/blog/drupal-console-sandcamp-sprinting-at-beach/</guid>
       <description>Hi Drupal World from sunny San Diego, I like to invite you to sprint with us and helping us on improve Drupal Console.
 Our focus of this sprint is going to add some of the new features to Drupal Console, as using the a chain command as actual command (#1898) this will allow us to generate Drupal Console commands without writing code. In addition, we will be working on improving the documentation about how we can use Drupal Console in other contribute projects.</description>
     </item>
     
     <item>
       <title>Drupal Status Awesomeness</title>
-      <link>https://www.darrylnorris.com/blog/drupal-status-awesomeness/</link>
+      <link>https://www.darryl.ai/blog/drupal-status-awesomeness/</link>
       <pubDate>Tue, 25 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/blog/drupal-status-awesomeness/</guid>
+      <guid>https://www.darryl.ai/blog/drupal-status-awesomeness/</guid>
       <description>Managing updates for multiple Drupal website it can consume a lot time. You might receive many e-mails from each Drupal website saying that you need to update your website. And sometimes you cannot update a specific module because you are using features that the next version it might cause a problem on your website. In order to see what updates your website needs you need to log in to each website to determinate, if a security update or even which updated it asking for.</description>
     </item>
     

@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Software Engineer, Tech, Startup and more</title>
-    <link>https://www.darrylnorris.com/tags/</link>
+    <link>https://www.darryl.ai/tags/</link>
     <description>Recent content in Tags on Software Engineer, Tech, Startup and more</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 May 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.darrylnorris.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.darryl.ai/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>development</title>
-      <link>https://www.darrylnorris.com/tags/development/</link>
+      <link>https://www.darryl.ai/tags/development/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/development/</guid>
+      <guid>https://www.darryl.ai/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>https://www.darrylnorris.com/tags/php/</link>
+      <link>https://www.darryl.ai/tags/php/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/php/</guid>
+      <guid>https://www.darryl.ai/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ckeditor</title>
-      <link>https://www.darrylnorris.com/tags/ckeditor/</link>
+      <link>https://www.darryl.ai/tags/ckeditor/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/ckeditor/</guid>
+      <guid>https://www.darryl.ai/tags/ckeditor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Drupal</title>
-      <link>https://www.darrylnorris.com/tags/drupal/</link>
+      <link>https://www.darryl.ai/tags/drupal/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/drupal/</guid>
+      <guid>https://www.darryl.ai/tags/drupal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>theming</title>
-      <link>https://www.darrylnorris.com/tags/theming/</link>
+      <link>https://www.darryl.ai/tags/theming/</link>
       <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/theming/</guid>
+      <guid>https://www.darryl.ai/tags/theming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cli</title>
-      <link>https://www.darrylnorris.com/tags/cli/</link>
+      <link>https://www.darryl.ai/tags/cli/</link>
       <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/cli/</guid>
+      <guid>https://www.darryl.ai/tags/cli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>twig</title>
-      <link>https://www.darrylnorris.com/tags/twig/</link>
+      <link>https://www.darryl.ai/tags/twig/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/twig/</guid>
+      <guid>https://www.darryl.ai/tags/twig/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bootstrap</title>
-      <link>https://www.darrylnorris.com/tags/bootstrap/</link>
+      <link>https://www.darryl.ai/tags/bootstrap/</link>
       <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/bootstrap/</guid>
+      <guid>https://www.darryl.ai/tags/bootstrap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash</title>
-      <link>https://www.darrylnorris.com/tags/bash/</link>
+      <link>https://www.darryl.ai/tags/bash/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/bash/</guid>
+      <guid>https://www.darryl.ai/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>https://www.darrylnorris.com/tags/devops/</link>
+      <link>https://www.darryl.ai/tags/devops/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.darrylnorris.com/tags/devops/</guid>
+      <guid>https://www.darryl.ai/tags/devops/</guid>
       <description></description>
     </item>
     

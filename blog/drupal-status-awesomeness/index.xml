@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drupal Status Awesomeness on Software Engineer, Tech, Startup and more</title>
-    <link>https://www.darrylnorris.com/blog/drupal-status-awesomeness/</link>
+    <link>https://www.darryl.ai/blog/drupal-status-awesomeness/</link>
     <description>Recent content in Drupal Status Awesomeness on Software Engineer, Tech, Startup and more</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Nov 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.darrylnorris.com/blog/drupal-status-awesomeness/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.darryl.ai/blog/drupal-status-awesomeness/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Sessions For DrupalCamp Stanford 2016 on Software Engineer, Tech, Startup and more</title>
-    <link>https://www.darrylnorris.com/blog/my-sessions-for-drupalcamp-stanford-2016/</link>
+    <link>https://www.darryl.ai/blog/my-sessions-for-drupalcamp-stanford-2016/</link>
     <description>Recent content in My Sessions For DrupalCamp Stanford 2016 on Software Engineer, Tech, Startup and more</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Mar 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.darrylnorris.com/blog/my-sessions-for-drupalcamp-stanford-2016/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.darryl.ai/blog/my-sessions-for-drupalcamp-stanford-2016/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

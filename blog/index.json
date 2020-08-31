@@ -13,7 +13,7 @@
                "title": "Get Your Libraries And Breakpoint Information From The UI",
                "date": "2016-05-15 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/get-your-libraries-and-breakpoint-information-from-ui/",
+               "permalink" : "https://www.darryl.ai/blog/get-your-libraries-and-breakpoint-information-from-ui/",
                "description" : "By default, Drupal does not have a way to see the breakpoint and libraries configuration from the UI. I have developed couple modules to show this information from the UI."
              }
         
@@ -23,7 +23,7 @@
                "title": "4 New CKEditor Plugins For Drupal 8",
                "date": "2016-05-06 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/4-new-ckeditor-plugins-for-drupal-8/",
+               "permalink" : "https://www.darryl.ai/blog/4-new-ckeditor-plugins-for-drupal-8/",
                "description" : "I have created 4 new modules, which integrate CKEditor packages with Drupal 8."
              }
         
@@ -33,7 +33,7 @@
                "title": "Light Skeleton Drupal 8 Release",
                "date": "2016-03-31 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/light-skeleton-drupal-8-release/",
+               "permalink" : "https://www.darryl.ai/blog/light-skeleton-drupal-8-release/",
                "description" : "Light Skeleton is been ported to Drupal 8 and it has new features."
              }
         
@@ -43,7 +43,7 @@
                "title": "My Sessions For DrupalCamp Stanford 2016",
                "date": "2016-03-31 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/my-sessions-for-drupalcamp-stanford-2016/",
+               "permalink" : "https://www.darryl.ai/blog/my-sessions-for-drupalcamp-stanford-2016/",
                "description" : "I am going to be speaking at DrupalCamp Stanford 2016 and here is what I am going to be talking about..."
              }
         
@@ -53,7 +53,7 @@
                "title": "Drupal Console SandCamp Sprinting At The Beach",
                "date": "2016-02-25 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/drupal-console-sandcamp-sprinting-at-beach/",
+               "permalink" : "https://www.darryl.ai/blog/drupal-console-sandcamp-sprinting-at-beach/",
                "description" : "Some of the folks from the Drupal Console team are going to be sprinting at SandCamp."
              }
         
@@ -63,7 +63,7 @@
                "title": "Dirty Trick To Style Views Fields in Drupal 8",
                "date": "2016-02-16 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/dirty-trick-to-style-views-fields-drupal-8/",
+               "permalink" : "https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/",
                "description" : "I am sharing my experiences getting trying to get views field template in Drupal"
              }
         
@@ -73,7 +73,7 @@
                "title": "Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper",
                "date": "2016-02-14 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/",
+               "permalink" : "https://www.darryl.ai/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/",
                "description" : "New releases for few Drupal projects Bootstrap Layouts, Light Skeleton and Casper"
              }
         
@@ -83,7 +83,7 @@
                "title": "Rebuilding DarrylNorris.com Using Drupal 8",
                "date": "2016-02-09 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/rebuilding-darrylnorris-com-using-drupal-8/",
+               "permalink" : "https://www.darryl.ai/blog/rebuilding-darrylnorris-com-using-drupal-8/",
                "description" : "I have rebuild DarrylNorris using Drupal 8 and here is how I did it."
              }
         
@@ -93,7 +93,7 @@
                "title": "Pokémon and Drupal with Pokéapi",
                "date": "2015-10-22 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/",
+               "permalink" : "https://www.darryl.ai/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/",
                "description" : "Integrating a Pokémon API and integrate with Drupal"
              }
         
@@ -103,7 +103,7 @@
                "title": "Light Skeleton - A Simple Theme (MVP)",
                "date": "2015-09-30 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/light-skeleton-a-simple-theme-mvp/",
+               "permalink" : "https://www.darryl.ai/blog/light-skeleton-a-simple-theme-mvp/",
                "description" : "Building my first open source Drupal theme"
              }
         
@@ -113,7 +113,7 @@
                "title": "How To Request A Node via REST Using Web Services in Drupal 8",
                "date": "2015-07-08 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/how-to-request-a-node-via-rest-using-web-services-drupal-8/",
+               "permalink" : "https://www.darryl.ai/blog/how-to-request-a-node-via-rest-using-web-services-drupal-8/",
                "description" : "An explication on how to make your Node into a REST API's"
              }
         
@@ -123,7 +123,7 @@
                "title": "How To Replace The Title Field To a Term Of Reference (Taxonomies)?",
                "date": "2015-04-15 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/how-to-replace-title-field-to-a-term-of-reference-taxonomies/",
+               "permalink" : "https://www.darryl.ai/blog/how-to-replace-title-field-to-a-term-of-reference-taxonomies/",
                "description" : "How to use Drupal Rules module to automatically set a value of a field."
              }
         
@@ -133,7 +133,7 @@
                "title": "Ride The Lightning Game – Pantheon Dashboard Destroyer (April Fool)",
                "date": "2015-04-02 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/ride-lightning-game-pantheon-dashboard-destroyer-april-fool/",
+               "permalink" : "https://www.darryl.ai/blog/ride-lightning-game-pantheon-dashboard-destroyer-april-fool/",
                "description" : "Pantheon April Fools Game"
              }
         
@@ -143,7 +143,7 @@
                "title": "CSS for Drupal 7 Site Builders",
                "date": "2015-01-18 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/css-for-drupal-7-site-builders/",
+               "permalink" : "https://www.darryl.ai/blog/css-for-drupal-7-site-builders/",
                "description" : "I am showing how to use couple modules to add css via Drupal UI"
              }
         
@@ -153,7 +153,7 @@
                "title": "Lazy Dubuntu Alpha Release",
                "date": "2014-12-16 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/lazy-dubuntu-alpha-release/",
+               "permalink" : "https://www.darryl.ai/blog/lazy-dubuntu-alpha-release/",
                "description" : "An experimental shell script to setup Drupal development environment"
              }
         
@@ -163,7 +163,7 @@
                "title": "Drupal Status Awesomeness",
                "date": "2014-11-25 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/drupal-status-awesomeness/",
+               "permalink" : "https://www.darryl.ai/blog/drupal-status-awesomeness/",
                "description" : "A great module and services to see Drupal security updates required"
              }
         
@@ -173,7 +173,7 @@
                "title": "Lazy Dubuntu First Week Recap",
                "date": "2014-11-19 00:00:00 +0000 UTC",
                "type": "blog",
-               "permalink" : "https://www.darrylnorris.com/blog/lazy-dubuntu-first-week-recap/",
+               "permalink" : "https://www.darryl.ai/blog/lazy-dubuntu-first-week-recap/",
                "description" : "Lazy Dubuntu - How I setup my Drupal development environment"
              }
         

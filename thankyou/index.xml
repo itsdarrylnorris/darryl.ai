@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thank you on Software Engineer, Tech, Startup and more</title>
-    <link>https://www.darrylnorris.com/thankyou/</link>
+    <link>https://www.darryl.ai/thankyou/</link>
     <description>Recent content in Thank you on Software Engineer, Tech, Startup and more</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
     
-	<atom:link href="https://www.darrylnorris.com/thankyou/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.darryl.ai/thankyou/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
