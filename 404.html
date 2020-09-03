@@ -5,6 +5,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.darryl.ai/js/turbolinks.min.js"></script>
+	<script>Turbolinks.start()</script>
+	<script src="https://www.darryl.ai/js/darkmode.js"></script>
+	<script>
+
+		function addDarkmodeWidget() {
+			new Darkmode({
+				saveInCookies: true, 
+				label: '🌓', 
+				autoMatchOsTheme: true 
+			}).showWidget();
+		}
+		window.addEventListener('turbolinks:load', addDarkmodeWidget);
+	</script>
+
 	
 	
 	

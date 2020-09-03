@@ -5,6 +5,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.darryl.ai/js/turbolinks.min.js"></script>
+	<script>Turbolinks.start()</script>
+	<script src="https://www.darryl.ai/js/darkmode.js"></script>
+	<script>
+
+		function addDarkmodeWidget() {
+			new Darkmode({
+				saveInCookies: true, 
+				label: '🌓', 
+				autoMatchOsTheme: true 
+			}).showWidget();
+		}
+		window.addEventListener('turbolinks:load', addDarkmodeWidget);
+	</script>
+
 	
 	
 	
@@ -108,23 +124,83 @@ These modules should be used for quick changes. These modules should not be used
         </article>
 
         
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.darryl.ai%2fblog%2fcss-for-drupal-7-site-builders%2f - CSS%20for%20Drupal%207%20Site%20Builders by @itsdarrylnorris"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+        
 
         
         <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'darrylnorrissblog'; 
+    var disqus_shortname = 'darrylnorrissblog';
 
      
-    (function() {
+    (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
 </div>
+        
 
         
+        <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/blog/get-your-libraries-and-breakpoint-information-from-ui/">Get Your Libraries And Breakpoint Information From The UI<aside class="dates">May 15 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/4-new-ckeditor-plugins-for-drupal-8/">4 New CKEditor Plugins For Drupal 8<aside class="dates">May 6 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/light-skeleton-drupal-8-release/">Light Skeleton Drupal 8 Release<aside class="dates">Mar 31 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/my-sessions-for-drupalcamp-stanford-2016/">My Sessions For DrupalCamp Stanford 2016<aside class="dates">Mar 31 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/drupal-console-sandcamp-sprinting-at-beach/">Drupal Console SandCamp Sprinting At The Beach<aside class="dates">Feb 25 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/dirty-trick-to-style-views-fields-drupal-8/">Dirty Trick To Style Views Fields in Drupal 8<aside class="dates">Feb 16 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/">Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper<aside class="dates">Feb 14 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/rebuilding-darrylnorris-com-using-drupal-8/">Rebuilding DarrylNorris.com Using Drupal 8<aside class="dates">Feb 9 2016</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/">Pokémon and Drupal with Pokéapi<aside class="dates">Oct 22 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/light-skeleton-a-simple-theme-mvp/">Light Skeleton - A Simple Theme (MVP)<aside class="dates">Sep 30 2015</aside></a>
+        </li>
+    
+</ul>
 
         
 
@@ -166,20 +242,9 @@ These modules should be used for quick changes. These modules should not be used
 
     <script src="https://www.darryl.ai/js/jquery-3.3.1.min.js"></script>
 <script src="https://www.darryl.ai/js/main.js"></script>
-<script src="https://www.darryl.ai/js/darkmode.js"></script>
 <script src="https://www.darryl.ai/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script>
-  function addDarkmodeWidget() {
-    new Darkmode({
-      saveInCookies: true, 
-      label: '🌓', 
-      autoMatchOsTheme: true 
-    }).showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
 
 
 
