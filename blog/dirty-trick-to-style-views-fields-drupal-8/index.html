@@ -1,102 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-us" >
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<script src="https://www.darryl.ai/js/turbolinks.min.js"></script>
-	<script>Turbolinks.start()</script>
-	<script src="https://www.darryl.ai/js/darkmode.js"></script>
-	<script>
-
-		function addDarkmodeWidget() {
-			new Darkmode({
-				saveInCookies: true, 
-				label: '🌓', 
-				autoMatchOsTheme: true 
-			}).showWidget();
-		}
-		window.addEventListener('turbolinks:load', addDarkmodeWidget);
-	</script>
-
-	
-	
-	
-	<meta name="description" content="Software Engineer, Tech, Startup and more.">
-	<meta name="generator" content="Hugo 0.74.3" />
-	<title>Dirty Trick To Style Views Fields in Drupal 8 &middot; Software Engineer, Tech, Startup and more</title>
-	<link rel="shortcut icon" href="https://www.darryl.ai/images/favicon.ico">
-	<link rel="stylesheet" href="https://www.darryl.ai/css/style.css">
-	<link rel="stylesheet" href="https://www.darryl.ai/css/highlight.css">
-
-	
-	<link rel="stylesheet" href="https://www.darryl.ai/css/monosocialiconsfont.css">
-	
-
-	
-	<link href="https://www.darryl.ai/index.xml" rel="alternate" type="application/rss+xml" title="Software Engineer, Tech, Startup and more" />
-	
-
-	
-</head>
-
-<body>
-    <nav class="main-nav">
-	
-	
-	<a href='https://www.darryl.ai/'> <span
-			class="arrow">←</span>Home</a>
-	
-	<a href='https://www.darryl.ai/blog'>Archive</a>
-	
-	<a href='https://www.darryl.ai/about'>About</a>
-
-	
-
-	
-	<a class="cta" href="https://www.darryl.ai/index.xml">Subscribe</a>
-	
-</nav>
-
-    <section id="wrapper" class="post">
-        <article>
-            <header>
-                <h1>
-                    Dirty Trick To Style Views Fields in Drupal 8
-                </h1>
-                <h2 class="headline">
-                    Feb 16, 2016
-                    · 553 words
-                    · 3 minute read
-                    <span class="tags">
-                        
-                        
-                        
-                        <a href="https://www.darryl.ai/tags/twig">twig</a>
-                        
-                        <a href="https://www.darryl.ai/tags/drupal">Drupal</a>
-                        
-                        <a href="https://www.darryl.ai/tags/theming">theming</a>
-                        
-                        
-                        
-                    </span>
-                </h2>
-            </header>
-            
-            <section id="post-body">
-                <p>Have you ever try it out creating a views field template in Drupal 8? When I started working with Casper, I was trying
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><script src=https://www.darryl.ai/js/app.min.d177edf287a36cba5a13576ab1193463143f1ea51d118302fa64de1b4fc7ede6.js></script><meta name=description content="Software Engineer, Tech, Startup and more."><meta name=generator content="Hugo 0.74.3"><title>Dirty Trick To Style Views Fields in Drupal 8 &#183; Software Engineer, Tech, Startup and more</title><link rel="shortcut icon" href=https://www.darryl.ai/images/favicon.ico><link rel=stylesheet href=https://www.darryl.ai/css/style.css><link rel=stylesheet href=https://www.darryl.ai/css/highlight.css><link rel=stylesheet href=https://www.darryl.ai/css/monosocialiconsfont.css><link href=https://www.darryl.ai/index.xml rel=alternate type=application/rss+xml title="Software Engineer, Tech, Startup and more"></head><body><nav class=main-nav><a href=https://www.darryl.ai/><span class=arrow>←</span>Home</a>
+<a href=https://www.darryl.ai/blog>Archive</a>
+<a href=https://www.darryl.ai/about>About</a>
+<a class=cta href=https://www.darryl.ai/index.xml>Subscribe</a></nav><section id=wrapper class=post><article><header><h1>Dirty Trick To Style Views Fields in Drupal 8</h1><h2 class=headline>Feb 16, 2016
+· 553 words
+· 3 minute read
+<span class=tags><a href=https://www.darryl.ai/tags/twig>twig</a>
+<a href=https://www.darryl.ai/tags/drupal>Drupal</a>
+<a href=https://www.darryl.ai/tags/theming>theming</a></span></h2></header><section id=post-body><p>Have you ever try it out creating a views field template in Drupal 8? When I started working with Casper, I was trying
 to create a template base on a views field template and I notice few things inusual. First, there is no longer theming
-information from the views UI level instead they encourage you to use theme_debug (<a href="https://www.drupal.org/node/2362413)">https://www.drupal.org/node/2362413)</a>.
-Sadly theme_debug does not show all the suggestion possible (<a href="https://www.drupal.org/node/2118743">https://www.drupal.org/node/2118743</a>) and one of those
-suggestion is views field templates.</p>
-<p>I have been Drupal for quite a while so I know my work around to write a template without a suggestions. So I wrote
+information from the views UI level instead they encourage you to use theme_debug (<a href=https://www.drupal.org/node/2362413)>https://www.drupal.org/node/2362413)</a>.
+Sadly theme_debug does not show all the suggestion possible (<a href=https://www.drupal.org/node/2118743>https://www.drupal.org/node/2118743</a>) and one of those
+suggestion is views field templates.</p><p>I have been Drupal for quite a while so I know my work around to write a template without a suggestions. So I wrote
 something like this <code>views-view-field--frontpage--title.html.twig</code> to be able to add wrapper to title of the views
 frontpage, without need of a preprocess function. From here I use kint to debug which variables are available at this
-template and I run into multiple issues. First issue was a server error similar to this ..</p>
-<pre><code>Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away:
+template and I run into multiple issues. First issue was a server error similar to this ..</p><pre><code>Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away:
 CREATE TABLE {cache_render} ( `cid` VARCHAR(255) BINARY CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT
 '' COMMENT 'Primary Key: Unique cache ID.', `data` LONGBLOB NULL DEFAULT NULL COMMENT 'A collection of data to cache.',
 `expire` INT NOT NULL DEFAULT 0 COMMENT 'A Unix timestamp indicating when the cache entry should expire, or -1 for never.
@@ -107,153 +24,21 @@ VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The 
 was saved.', PRIMARY KEY (`cid`), INDEX `expire` (`expire`) ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4 COMMENT
 'Storage for the cache API.'; Array ( ) in Drupal\Core\Render\RenderCache-&gt;set() (line 275 of core/lib/Drupal/Core/Render/RenderCache.php).
 The website encountered an unexpected error. Please try again later.
-</code></pre><p>This can be fix by increasing <code>MAX_ALLOWED_PACKET</code>.</p>
-<p>Second issue was my browser crashing while trying to debug the variables available . Using <code>{{ kint() }}</code> will cause my
+</code></pre><p>This can be fix by increasing <code>MAX_ALLOWED_PACKET</code>.</p><p>Second issue was my browser crashing while trying to debug the variables available . Using <code>{{ kint() }}</code> will cause my
 browser to crash because it will try to get raw data from the sql query and that is too much for kint. After some
 investigation I found out a workaround to be able to add wrappers to views fields. By adding a preprocess function
 that turn views row into a variables. This will allows you to have a variables that you can added wrappers around it.
-Here is an example of preprocess function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function MYTHEME_preprocess_views_view_field(<span style="color:#960050;background-color:#1e0010">&amp;</span>$variables) {
+Here is an example of preprocess function:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>function MYTHEME_preprocess_views_view_field(<span style=color:#960050;background-color:#1e0010>&amp;</span>$variables) {
   $variables[&#39;output&#39;] = $variables[&#39;field&#39;]-&gt;advancedRender($variables[&#39;row&#39;]);
 }
 </code></pre></div><p>Once you have the above preprocess function in your project (theme/module) you can get a variables called output in your
-twig template. Just like this&hellip;</p>
-<pre><code>&lt;div class=&quot;wrapper&quot;&gt;{{ output }}&lt;/div&gt;
+twig template. Just like this&mldr;</p><pre><code>&lt;div class=&quot;wrapper&quot;&gt;{{ output }}&lt;/div&gt;
 </code></pre><p>And there you got that is how you can style views fields in Drupal 8. You can also achieve the same goal by creating a
 preprocess function that allow you to add a wrapper for a specify views field. However, I prefer to do it on a row level
-because it will automatically apply to any view field.</p>
-<p>Most of the information from this article was taken from a discussion at Drupal Answers, if you wish to see the original
-discussion please visit - <a href="http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig">http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig</a></p>
-
-            </section>
-        </article>
-
-        
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.darryl.ai%2fblog%2fdirty-trick-to-style-views-fields-drupal-8%2f - Dirty%20Trick%20To%20Style%20Views%20Fields%20in%20Drupal%208 by @itsdarrylnorris"><span class="icon-twitter"> tweet</span></a>
-
-<a class="facebook" href="#" onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;"><span class="icon-facebook-rect"> Share</span>
-</a>
-
-        
-
-        
-        <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'darrylnorrissblog';
-
-     
-    (function () {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-        Disqus.</a></noscript>
-</div>
-        
-
-        
-        <ul id="post-list" class="archive readmore">
-    <h3>Read more</h3>
-
-    
-    
-    
-        <li>
-            <a href="/blog/get-your-libraries-and-breakpoint-information-from-ui/">Get Your Libraries And Breakpoint Information From The UI<aside class="dates">May 15 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/4-new-ckeditor-plugins-for-drupal-8/">4 New CKEditor Plugins For Drupal 8<aside class="dates">May 6 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/light-skeleton-drupal-8-release/">Light Skeleton Drupal 8 Release<aside class="dates">Mar 31 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/my-sessions-for-drupalcamp-stanford-2016/">My Sessions For DrupalCamp Stanford 2016<aside class="dates">Mar 31 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/drupal-console-sandcamp-sprinting-at-beach/">Drupal Console SandCamp Sprinting At The Beach<aside class="dates">Feb 25 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/">Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper<aside class="dates">Feb 14 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/rebuilding-darrylnorris-com-using-drupal-8/">Rebuilding DarrylNorris.com Using Drupal 8<aside class="dates">Feb 9 2016</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/">Pokémon and Drupal with Pokéapi<aside class="dates">Oct 22 2015</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/light-skeleton-a-simple-theme-mvp/">Light Skeleton - A Simple Theme (MVP)<aside class="dates">Sep 30 2015</aside></a>
-        </li>
-    
-        <li>
-            <a href="/blog/how-to-request-a-node-via-rest-using-web-services-drupal-8/">How To Request A Node via REST Using Web Services in Drupal 8<aside class="dates">Jul 8 2015</aside></a>
-        </li>
-    
-</ul>
-
-        
-
-        <footer id="footer">
-    
-    <div id="social">
-
-	
-	
-    
-    <a class="symbol" href="https://www.github.com/itsdarrylnorris">
-        circlegithub
-    </a>
-    
-    <a class="symbol" href="https://www.linkedin.com/in/darrylnorris/">
-        circlelinkedin
-    </a>
-    
-    <a class="symbol" href="https://www.reddit.com/user/itsdarrylnorris/">
-        circlereddit
-    </a>
-    
-    <a class="symbol" href="https://www.twitter.com/itsdarrylnorris">
-        circletwitterbird
-    </a>
-    
-
-
-</div>
-
-    
-    <p class="small">
-        
-        © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> Darryl Norris
-        
-    </p>
-</footer>
-    </section>
-
-    <script src="https://www.darryl.ai/js/jquery-3.3.1.min.js"></script>
-<script src="https://www.darryl.ai/js/main.js"></script>
-<script src="https://www.darryl.ai/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-</body>
-
-</html>
+because it will automatically apply to any view field.</p><p>Most of the information from this article was taken from a discussion at Drupal Answers, if you wish to see the original
+discussion please visit - <a href=http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig>http://drupal.stackexchange.com/questions/186165/how-to-get-variables-of-field-from-a-view-in-twig</a></p></section></article><a class=twitter href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.darryl.ai%2fblog%2fdirty-trick-to-style-views-fields-drupal-8%2f - Dirty%20Trick%20To%20Style%20Views%20Fields%20in%20Drupal%208 by @itsdarrylnorris"><span class=icon-twitter>tweet</span></a>
+<a class=facebook href=# onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"><span class=icon-facebook-rect>Share</span></a><div id=disqus_thread></div><script type=text/javascript>var disqus_shortname='darrylnorrissblog';(function(){var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by
+Disqus.</a></noscript></div><ul id=post-list class="archive readmore"><h3>Read more</h3><li><a href=/blog/get-your-libraries-and-breakpoint-information-from-ui/>Get Your Libraries And Breakpoint Information From The UI<aside class=dates>May 15 2016</aside></a></li><li><a href=/blog/4-new-ckeditor-plugins-for-drupal-8/>4 New CKEditor Plugins For Drupal 8<aside class=dates>May 6 2016</aside></a></li><li><a href=/blog/light-skeleton-drupal-8-release/>Light Skeleton Drupal 8 Release<aside class=dates>Mar 31 2016</aside></a></li><li><a href=/blog/my-sessions-for-drupalcamp-stanford-2016/>My Sessions For DrupalCamp Stanford 2016<aside class=dates>Mar 31 2016</aside></a></li><li><a href=/blog/drupal-console-sandcamp-sprinting-at-beach/>Drupal Console SandCamp Sprinting At The Beach<aside class=dates>Feb 25 2016</aside></a></li><li><a href=/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/>Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper<aside class=dates>Feb 14 2016</aside></a></li><li><a href=/blog/rebuilding-darrylnorris-com-using-drupal-8/>Rebuilding DarrylNorris.com Using Drupal 8<aside class=dates>Feb 9 2016</aside></a></li><li><a href=/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/>Pokémon and Drupal with Pokéapi<aside class=dates>Oct 22 2015</aside></a></li><li><a href=/blog/light-skeleton-a-simple-theme-mvp/>Light Skeleton - A Simple Theme (MVP)<aside class=dates>Sep 30 2015</aside></a></li><li><a href=/blog/how-to-request-a-node-via-rest-using-web-services-drupal-8/>How To Request A Node via REST Using Web Services in Drupal 8<aside class=dates>Jul 8 2015</aside></a></li></ul><footer id=footer><div id=social><a class=symbol href=https://www.github.com/itsdarrylnorris>circlegithub</a>
+<a class=symbol href=https://www.linkedin.com/in/darrylnorris/>circlelinkedin</a>
+<a class=symbol href=https://www.reddit.com/user/itsdarrylnorris/>circlereddit</a>
+<a class=symbol href=https://www.twitter.com/itsdarrylnorris>circletwitterbird</a></div><p class=small>© Copyright 2020 <i class="fa fa-heart" aria-hidden=true></i>Darryl Norris</p></footer></section></body></html>

@@ -1,12 +1,1 @@
-{
-	"data" : 
-	{
-  "title": "Light Skeleton - A Simple Theme (MVP)",
-  "date": "2015-09-30 00:00:00 +0000 UTC",
-  "type": "blog",
-  "permalink": "https://www.darryl.ai/blog/light-skeleton-a-simple-theme-mvp/",
-  "description": "Building my first open source Drupal theme"
-}
-
-
-}
+{"data":{"title":"Light Skeleton - A Simple Theme (MVP)","date":"2015-09-30 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/light-skeleton-a-simple-theme-mvp/","description":"Building my first open source Drupal theme"}}

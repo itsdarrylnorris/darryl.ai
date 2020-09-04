@@ -1,12 +1,1 @@
-{
-	"data" : 
-	{
-  "title": "How To Replace The Title Field To a Term Of Reference (Taxonomies)?",
-  "date": "2015-04-15 00:00:00 +0000 UTC",
-  "type": "blog",
-  "permalink": "https://www.darryl.ai/blog/how-to-replace-title-field-to-a-term-of-reference-taxonomies/",
-  "description": "How to use Drupal Rules module to automatically set a value of a field."
-}
-
-
-}
+{"data":{"title":"How To Replace The Title Field To a Term Of Reference (Taxonomies)?","date":"2015-04-15 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/how-to-replace-title-field-to-a-term-of-reference-taxonomies/","description":"How to use Drupal Rules module to automatically set a value of a field."}}
