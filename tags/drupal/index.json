@@ -1,1 +1,51 @@
-{"data":{"count":"4","items":[{"title":"4 New CKEditor Plugins For Drupal 8","date":"2016-05-06 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/4-new-ckeditor-plugins-for-drupal-8/","description":"I have created 4 new modules, which integrate CKEditor packages with Drupal 8."},{"title":"Dirty Trick To Style Views Fields in Drupal 8","date":"2016-02-16 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/","description":"I am sharing my experiences getting trying to get views field template in Drupal"},{"title":"CSS for Drupal 7 Site Builders","date":"2015-01-18 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/css-for-drupal-7-site-builders/","description":"I am showing how to use couple modules to add css via Drupal UI"},{"title":"Lazy Dubuntu First Week Recap","date":"2014-11-19 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/lazy-dubuntu-first-week-recap/","description":"Lazy Dubuntu - How I setup my Drupal development environment"}]}}
+{
+	"data" : 
+    {
+        
+        
+        "count" : "4"
+        ,"items" : [
+        
+            
+             {
+               "title": "4 New CKEditor Plugins For Drupal 8",
+               "date": "2016-05-06 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/4-new-ckeditor-plugins-for-drupal-8/",
+               "description" : "I have created 4 new modules, which integrate CKEditor packages with Drupal 8."
+             }
+        
+            ,
+             
+             {
+               "title": "Dirty Trick To Style Views Fields in Drupal 8",
+               "date": "2016-02-16 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/",
+               "description" : "I am sharing my experiences getting trying to get views field template in Drupal"
+             }
+        
+            ,
+             
+             {
+               "title": "CSS for Drupal 7 Site Builders",
+               "date": "2015-01-18 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/css-for-drupal-7-site-builders/",
+               "description" : "I am showing how to use couple modules to add css via Drupal UI"
+             }
+        
+            ,
+             
+             {
+               "title": "Lazy Dubuntu First Week Recap",
+               "date": "2014-11-19 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/lazy-dubuntu-first-week-recap/",
+               "description" : "Lazy Dubuntu - How I setup my Drupal development environment"
+             }
+        
+        ]
+    }
+
+}

@@ -1,1 +1,12 @@
-{"data":{"title":"Dirty Trick To Style Views Fields in Drupal 8","date":"2016-02-16 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/","description":"I am sharing my experiences getting trying to get views field template in Drupal"}}
+{
+	"data" : 
+	{
+  "title": "Dirty Trick To Style Views Fields in Drupal 8",
+  "date": "2016-02-16 00:00:00 +0000 UTC",
+  "type": "blog",
+  "permalink": "https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/",
+  "description": "I am sharing my experiences getting trying to get views field template in Drupal"
+}
+
+
+}

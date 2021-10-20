@@ -1,1 +1,12 @@
-{"data":{"title":"Pokémon and Drupal with Pokéapi","date":"2015-10-22 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/","description":"Integrating a Pokémon API and integrate with Drupal"}}
+{
+	"data" : 
+	{
+  "title": "Pokémon and Drupal with Pokéapi",
+  "date": "2015-10-22 00:00:00 +0000 UTC",
+  "type": "blog",
+  "permalink": "https://www.darryl.ai/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/",
+  "description": "Integrating a Pokémon API and integrate with Drupal"
+}
+
+
+}

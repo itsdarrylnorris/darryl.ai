@@ -1,1 +1,111 @@
-{"data":{"count":"10","items":[{"title":"Light Skeleton Drupal 8 Release","date":"2016-03-31 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/light-skeleton-drupal-8-release/","description":"Light Skeleton is been ported to Drupal 8 and it has new features."},{"title":"My Sessions For DrupalCamp Stanford 2016","date":"2016-03-31 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/my-sessions-for-drupalcamp-stanford-2016/","description":"I am going to be speaking at DrupalCamp Stanford 2016 and here is what I am going to be talking about..."},{"title":"Dirty Trick To Style Views Fields in Drupal 8","date":"2016-02-16 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/","description":"I am sharing my experiences getting trying to get views field template in Drupal"},{"title":"Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper","date":"2016-02-14 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/","description":"New releases for few Drupal projects Bootstrap Layouts, Light Skeleton and Casper"},{"title":"Rebuilding DarrylNorris.com Using Drupal 8","date":"2016-02-09 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/rebuilding-darrylnorris-com-using-drupal-8/","description":"I have rebuild DarrylNorris using Drupal 8 and here is how I did it."},{"title":"Pokémon and Drupal with Pokéapi","date":"2015-10-22 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/","description":"Integrating a Pokémon API and integrate with Drupal"},{"title":"Light Skeleton - A Simple Theme (MVP)","date":"2015-09-30 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/light-skeleton-a-simple-theme-mvp/","description":"Building my first open source Drupal theme"},{"title":"Ride The Lightning Game – Pantheon Dashboard Destroyer (April Fool)","date":"2015-04-02 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/ride-lightning-game-pantheon-dashboard-destroyer-april-fool/","description":"Pantheon April Fools Game"},{"title":"CSS for Drupal 7 Site Builders","date":"2015-01-18 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/css-for-drupal-7-site-builders/","description":"I am showing how to use couple modules to add css via Drupal UI"},{"title":"Lazy Dubuntu Alpha Release","date":"2014-12-16 00:00:00 +0000 UTC","type":"blog","permalink":"https://www.darryl.ai/blog/lazy-dubuntu-alpha-release/","description":"An experimental shell script to setup Drupal development environment"}]}}
+{
+	"data" : 
+    {
+        
+        
+        "count" : "10"
+        ,"items" : [
+        
+            
+             {
+               "title": "Light Skeleton Drupal 8 Release",
+               "date": "2016-03-31 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/light-skeleton-drupal-8-release/",
+               "description" : "Light Skeleton is been ported to Drupal 8 and it has new features."
+             }
+        
+            ,
+             
+             {
+               "title": "My Sessions For DrupalCamp Stanford 2016",
+               "date": "2016-03-31 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/my-sessions-for-drupalcamp-stanford-2016/",
+               "description" : "I am going to be speaking at DrupalCamp Stanford 2016 and here is what I am going to be talking about..."
+             }
+        
+            ,
+             
+             {
+               "title": "Dirty Trick To Style Views Fields in Drupal 8",
+               "date": "2016-02-16 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/dirty-trick-to-style-views-fields-drupal-8/",
+               "description" : "I am sharing my experiences getting trying to get views field template in Drupal"
+             }
+        
+            ,
+             
+             {
+               "title": "Drupal 8 Contrib Releases: Bootstrap Layouts, Light Skeleton and Casper",
+               "date": "2016-02-14 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/drupal-8-contrib-releases-bootstrap-layouts-light-skeleton-and-casper/",
+               "description" : "New releases for few Drupal projects Bootstrap Layouts, Light Skeleton and Casper"
+             }
+        
+            ,
+             
+             {
+               "title": "Rebuilding DarrylNorris.com Using Drupal 8",
+               "date": "2016-02-09 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/rebuilding-darrylnorris-com-using-drupal-8/",
+               "description" : "I have rebuild DarrylNorris using Drupal 8 and here is how I did it."
+             }
+        
+            ,
+             
+             {
+               "title": "Pokémon and Drupal with Pokéapi",
+               "date": "2015-10-22 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/pok%C3%A9mon-and-drupal-pok%C3%A9api/",
+               "description" : "Integrating a Pokémon API and integrate with Drupal"
+             }
+        
+            ,
+             
+             {
+               "title": "Light Skeleton - A Simple Theme (MVP)",
+               "date": "2015-09-30 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/light-skeleton-a-simple-theme-mvp/",
+               "description" : "Building my first open source Drupal theme"
+             }
+        
+            ,
+             
+             {
+               "title": "Ride The Lightning Game – Pantheon Dashboard Destroyer (April Fool)",
+               "date": "2015-04-02 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/ride-lightning-game-pantheon-dashboard-destroyer-april-fool/",
+               "description" : "Pantheon April Fools Game"
+             }
+        
+            ,
+             
+             {
+               "title": "CSS for Drupal 7 Site Builders",
+               "date": "2015-01-18 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/css-for-drupal-7-site-builders/",
+               "description" : "I am showing how to use couple modules to add css via Drupal UI"
+             }
+        
+            ,
+             
+             {
+               "title": "Lazy Dubuntu Alpha Release",
+               "date": "2014-12-16 00:00:00 +0000 UTC",
+               "type": "blog",
+               "permalink" : "https://www.darryl.ai/blog/lazy-dubuntu-alpha-release/",
+               "description" : "An experimental shell script to setup Drupal development environment"
+             }
+        
+        ]
+    }
+
+}
